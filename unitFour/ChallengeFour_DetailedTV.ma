@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: ChallengeFour_DetailedTV.ma
-//Last modified: Sun, Feb 02, 2025 07:10:54 PM
+//Last modified: Sun, Feb 02, 2025 07:13:48 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,18 +13,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Enterprise v2009 (Build: 19045)";
-fileInfo "UUID" "13746440-4B96-6DEF-666F-43945F0DEFE4";
+fileInfo "UUID" "6BD83B5C-4E0E-21D2-05E2-2D83E2A9089A";
 createNode transform -s -n "persp";
 	rename -uid "96488201-4E2C-7CF2-6CC6-34B83BBEB772";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.186033492520497 5.8380454580040748 8.7671368221435237 ;
-	setAttr ".r" -type "double3" -2897.9999999991037 2212.3999999999464 0 ;
+	setAttr ".t" -type "double3" 9.6385667805408737 5.6375056258380907 10.764072186140208 ;
+	setAttr ".r" -type "double3" -2899.1999999999321 1837.1999999995392 -1.9965067284186309e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FB6A41C5-42FB-4565-7794-3AA709DD9CBC";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.104540743220305;
+	setAttr ".coi" 13.916587420096342;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -10386,6 +10386,18 @@ createNode mesh -n "TVBoxShape" -p "TVBox";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.4375 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape1" -p "TVBox";
+	rename -uid "BA6425F2-4F34-4DBF-1A5D-778EDCE841E0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 21 "f[13:14]" "f[16:17]" "f[67:68]" "f[70:71]" "f[73:74]" "f[97:98]" "f[100:101]" "f[103:104]" "f[106:107]" "f[111]" "f[129:132]" "f[141:144]" "f[157]" "f[160]" "f[211]" "f[214]" "f[217]" "f[241]" "f[244]" "f[247]" "f[250]";
@@ -14345,7 +14357,7 @@ createNode lambert -n "LightCyan";
 createNode shadingEngine -n "lambert8SG";
 	rename -uid "FBB45641-49CF-5F0A-0D57-FF9B71DF8333";
 	setAttr ".ihi" 0;
-	setAttr -s 22 ".dsm";
+	setAttr -s 21 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 21 ".gn";
 createNode materialInfo -n "materialInfo11";
@@ -14360,11 +14372,8 @@ createNode shadingEngine -n "lambert9SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo12";
 	rename -uid "AA31A6DA-481C-1010-7DDD-E3A021A23956";
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "F6FFDBBB-4B74-E756-9996-BC8FF55E918A";
-	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "FEB39EB1-469B-D027-30BF-00A6623FAAA0";
+	rename -uid "5AE21812-4270-252D-31A4-5E8E89D13E15";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -263.69379106471365 -2466.6200137171704 ;
 	setAttr ".tgi[0].vh" -type "double2" 2210.9669246473936 1891.6200365656166 ;
@@ -14435,6 +14444,23 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[21].x" 1045.7142333984375;
 	setAttr ".tgi[0].ni[21].y" 1447.142822265625;
 	setAttr ".tgi[0].ni[21].nvs" 1923;
+createNode polySoftEdge -n "polySoftEdge1";
+	rename -uid "01E52053-45FD-9BFF-C2DA-009C7197F674";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 36 "e[217]" "e[219]" "e[221]" "e[223]" "e[225]" "e[227]" "e[229]" "e[231]" "e[233]" "e[235]" "e[237]" "e[239]" "e[241]" "e[243]" "e[245]" "e[247]" "e[249]" "e[251]" "e[253]" "e[255]" "e[257]" "e[259]" "e[261]" "e[263]" "e[265]" "e[267]" "e[269]" "e[271]" "e[273]" "e[275]" "e[277]" "e[279]" "e[281]" "e[283]" "e[285]" "e[287]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.0662343142011752 0 0 0 0 1.2083739336256136 0
+		 0.74717813889323881 1.1491806676400416 0 1;
+	setAttr ".a" 180;
+createNode polySoftEdge -n "polySoftEdge2";
+	rename -uid "33CB94FB-497E-DE08-4A59-489AE736897F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 37 "e[577]" "e[585]" "e[587]" "e[592]" "e[597]" "e[602]" "e[607]" "e[612]" "e[617]" "e[622]" "e[627]" "e[632]" "e[637]" "e[642]" "e[647]" "e[652]" "e[657]" "e[662]" "e[667]" "e[672]" "e[677]" "e[682]" "e[687]" "e[692]" "e[697]" "e[702]" "e[707]" "e[712]" "e[717]" "e[722]" "e[727]" "e[732]" "e[737]" "e[742]" "e[747]" "e[752]" "e[828:899]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.0662343142011752 0 0 0 0 1.2083739336256136 0
+		 0.74717813889323881 1.1491806676400416 0 1;
+	setAttr ".a" 180;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "85014C45-4D9A-C226-3096-EAB34A3FF07F";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -14691,6 +14717,7 @@ connectAttr "groupId32.id" "|TileFloor|TileRow06|Tile04|TileShape4.ciog.cog[0].c
 		;
 connectAttr "groupId80.id" "PictureShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "PictureShape.iog.og[0].gco";
+connectAttr "polySoftEdge2.out" "TVBoxShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -15015,6 +15042,10 @@ connectAttr "lambert9SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni
 		;
 connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
 		;
+connectAttr "polySurfaceShape1.o" "polySoftEdge1.ip";
+connectAttr "TVBoxShape.wm" "polySoftEdge1.mp";
+connectAttr "polySoftEdge1.out" "polySoftEdge2.ip";
+connectAttr "TVBoxShape.wm" "polySoftEdge2.mp";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
